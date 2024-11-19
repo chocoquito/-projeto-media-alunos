@@ -1,0 +1,15 @@
+quantidade_notas = int(input("Digite a quantidade de notas: "))
+
+if quantidade_notas <= 0:
+    print("Quantidade de notas inválida!")
+    exit()
+
+soma = 0.0
+for i in range(quantidade_notas):
+    nota = float(input(f"Digite a nota {i + 1}: "))
+    soma += nota
+    
+media = soma / quantidade_notas
+
+
+print(f"A média aritmética das notas é: {media:.2f}")
