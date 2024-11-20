@@ -1,5 +1,25 @@
+quantidade_notas = int(input("Digite a quantidade de notas: "))
 
-quantidade_notas = int(input("Digite a quantidade de notas (no máximo 3): "))
+if quantidade_notas <= 0:
+    print("Quantidade de notas inválida!")
+    exit()
+
+soma = 0.0
+for i in range(quantidade_notas):
+    nota = float(input(f"Digite a nota {i + 1}: "))
+    soma += nota
+
+media = soma / quantidade_notas
+
+
+print(f"A média aritmética das notas é: {media:.2f}")
+if media >= 6:
+    print("Aprovado")
+elif 5.0 <= media <= 6.0:
+    print("Recuperação")
+else:
+    print("Reprovado")
+    quantidade_notas = int(input("Digite a quantidade de notas (no máximo 3): "))
 
 soma_ponderada = 0
 peso_total = 0
